@@ -87,3 +87,9 @@ Detecta cuándo una batería queda por debajo de su nivel de tolerancia (cero kW
 * **Tiempo máximo de resolución:** 2 horas y 30 minutos reloj.  
 * **Metodología:** Desarrollo Guiado por Pruebas (TDD) y refactors sucesivos.  
 * **Métrica de éxito:** Se exige alcanzar una cobertura de código (Code Coverage) de al menos un **75%**, demostrando mediante tests el correcto funcionamiento del modelo, las estructuras arquitectónicas implícitas y el comportamiento transaccional ante las fallas descritas.
+
+|  |  |
+| --- | --- |
+| **APELLIDO y NOMBRE** | Sanchez Miguel Ignacio |
+| **COMISIÓN** | 3 |
+| **DNI** | 47.214.267 |
