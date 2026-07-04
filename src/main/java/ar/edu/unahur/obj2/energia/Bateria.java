@@ -3,7 +3,7 @@ package ar.edu.unahur.obj2.energia;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Bateria {
+public class Bateria{
     private String id;
     private int energiaActual;
     private List<InteresadoEnergia> interesados = new ArrayList<>();
@@ -29,11 +29,13 @@ public class Bateria {
         }
     }
     public void modificarEnergia(int cantidad) throws LimiteReservaExcedidoException{
-        int nuevoNivel = this.energiaActual + cantidad;
-        if (nuevoNivel < -5000){
-            throw new LimiteReservaExcedidoException("No se puede superar el limite de reserva absoluto de -5000 kWh.");
-        }
-        this.energiaActual = nuevoNivel;
-        notificarInteresados(cantidad);
+    int nuevoNivel = this.energiaActual + cantidad;
+    if (nuevoNivel < -5000){
+        throw new LimiteReservaExcedidoException("Operación rechazada en " + this.id + ": El consumo de " + Math.abs(cantidad) + 
+        " kWh dejaría la carga en " + nuevoNivel + " kWh, superando el límite de reserva absoluto de -5000 kWh."
+        );
+    }  
+    this.energiaActual = nuevoNivel;
+    notificarInteresados(cantidad);
     }
 }

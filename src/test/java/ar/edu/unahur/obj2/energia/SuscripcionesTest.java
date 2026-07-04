@@ -3,9 +3,9 @@ package ar.edu.unahur.obj2.energia;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class SuscripcionesTest {
+public class SuscripcionesTest{
     @Test
-    public void testNotificacionesYAuditoriaAlAlterarEnergia() throws LimiteReservaExcedidoException {
+    public void testNotificacionesYAuditoriaAlAlterarEnergia() throws LimiteReservaExcedidoException{
         Bateria bateria = new Bateria("BAT-OBS", 1000);
         RegistroAuditoria auditoria = new RegistroAuditoria();
         NotificacionAdministrador notificador = new NotificacionAdministrador();
@@ -16,7 +16,7 @@ public class SuscripcionesTest {
         bateria.modificarEnergia(-200);
     }
     @Test
-    public void testAlarmaReservaCriticaSeDisparaAbajoDeCero() throws LimiteReservaExcedidoException {
+    public void testAlarmaReservaCriticaSeDisparaAbajoDeCero() throws LimiteReservaExcedidoException{
         Bateria bateria = new Bateria("BAT-CRITICA", 200);
         AlarmaReservaCritica alarma = new AlarmaReservaCritica();
         bateria.registrarInteresado(alarma);

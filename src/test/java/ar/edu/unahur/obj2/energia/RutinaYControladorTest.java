@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;
 
-public class RutinaYControladorTest {
+public class RutinaYControladorTest{
     @Test
     public void testRutinaEjecutaTodasLasOperacionesYSeVacia() throws LimiteReservaExcedidoException{
         Bateria bateria = new Bateria("BAT-1", 1000);

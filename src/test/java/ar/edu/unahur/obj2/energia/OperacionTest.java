@@ -23,7 +23,7 @@ public class OperacionTest{
         assertEquals(1000, bateria.getEnergiaActual());
     }
     @Test
-    public void testValoresMenoresOIgualesACeroLanzanException() {
+    public void testValoresMenoresOIgualesACeroLanzanException(){
         Bateria bateria = new Bateria("BAT-TEST", 1000);
         assertThrows(IllegalArgumentException.class, () -> {new Carga(bateria, 0);});
         assertThrows(IllegalArgumentException.class, () -> {new Consumo(bateria, -50);});

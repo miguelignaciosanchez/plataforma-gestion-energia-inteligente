@@ -21,8 +21,6 @@ public class BateriaTest{
     @Test
     public void testSuperarLimiteDeReservaLanzaException(){
         Bateria bateria = new Bateria("BAT-01", 0);
-        assertThrows(LimiteReservaExcedidoException.class, () -> {
-            bateria.modificarEnergia(-5001);
-        });
+        assertThrows(LimiteReservaExcedidoException.class, () -> {bateria.modificarEnergia(-5001);});
     }
 }

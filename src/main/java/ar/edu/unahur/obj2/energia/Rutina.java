@@ -14,21 +14,20 @@ public class Rutina implements Operacion{
     @Override
     public void ejecutar() throws LimiteReservaExcedidoException{
         List<Operacion> ejecutadasConExito = new ArrayList<>();
-        try {
-            for (Operacion op : operaciones){
+        try{
+            for(Operacion op : operaciones){
                 op.ejecutar();
                 ejecutadasConExito.add(op);
             }
             operaciones.clear();
             
-        } catch (LimiteReservaExcedidoException e){
-            for (int i = ejecutadasConExito.size() - 1; i >= 0; i--){
+        }catch(LimiteReservaExcedidoException e){
+            for(int i = ejecutadasConExito.size() - 1; i >= 0; i--){
                 ejecutadasConExito.get(i).deshacer();
             }
             throw e;
         }
     }
-
     @Override
     public void deshacer(){
         for (int i = operaciones.size() - 1; i >= 0; i--){

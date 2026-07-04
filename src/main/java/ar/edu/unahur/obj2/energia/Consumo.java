@@ -16,9 +16,9 @@ public class Consumo implements Operacion{
     }
     @Override
     public void deshacer(){
-        try {
+        try{
             bateria.modificarEnergia(valor);
-        } catch (LimiteReservaExcedidoException e){
+        }catch(LimiteReservaExcedidoException e){
         }
     }
 }
