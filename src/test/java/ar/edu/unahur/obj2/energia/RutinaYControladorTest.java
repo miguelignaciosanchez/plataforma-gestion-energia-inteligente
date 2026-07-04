@@ -14,6 +14,7 @@ public class RutinaYControladorTest {
         rutina.ejecutar();
         assertEquals(1200, bateria.getEnergiaActual());
         assertEquals(0, rutina.getOperaciones().size());
+        rutina.deshacer();
     }
     @Test
     public void testRutinaTransaccionalAplicaRollbackSiUnaFalla(){
